@@ -6,6 +6,9 @@ import UIKit
 class PeopleViewController: UITableViewController {
     
        var people = [String]()
+       var gender = [String]()
+       var birthYear = [String]()
+       var mass = [String]()
     
        override func viewDidLoad() {
            super.viewDidLoad()
@@ -61,6 +64,10 @@ class PeopleViewController: UITableViewController {
                                        for person in results {
                                            let personDict = person as! NSDictionary
                                            self.people.append(personDict["name"]! as! String)
+                                           self.gender.append(personDict["gender"]! as! String)
+                                           self.mass.append(personDict["mass"]! as! String)
+                                           self.birthYear.append(personDict["birth_year"]! as! String)
+
                                        }
                                    }
                                }
@@ -92,6 +99,19 @@ class PeopleViewController: UITableViewController {
            return cell
        }
 
-    
+    //when cell clicked --> show details in another view controller (personVC)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let personVC = self.storyboard?.instantiateViewController(withIdentifier: "PersonDetailsViewController") as! PersonDetailsViewController
+                    
+        // sending data to PersonDetailsViewController
+        personVC.name = "Name: \(people[indexPath.row])"
+        personVC.gender = "Gender: \(gender[indexPath.row])"
+        personVC.mass = "Mass: \(mass[indexPath.row])"
+        personVC.birthYear = "Birth year: \(birthYear[indexPath.row])"
+        
+        self.present(personVC, animated: true, completion: nil)
+    }
+   
 }
 

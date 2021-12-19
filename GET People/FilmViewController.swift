@@ -6,7 +6,10 @@ import UIKit
 class FilmViewController: UITableViewController {
 
     var films = [String]()
- 
+    var releaseDate = [String]()
+    var director = [String]()
+    var openingCrawl = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      
@@ -49,7 +52,7 @@ class FilmViewController: UITableViewController {
 //                // to run the completion handler. This is async!
 //                task.resume()
         
-        //with mvc
+/////////////////////////////////////////
         // with mvc
         StarWarsModel.getAllFilms(completionHandler: {
             // passing what becomes "completionHandler" in the 'getAllPeople' function definition in StarWarsModel.swift
@@ -61,6 +64,9 @@ class FilmViewController: UITableViewController {
                                     for person in results {
                                         let personDict = person as! NSDictionary
                                         self.films.append(personDict["title"]! as! String)
+                                        self.releaseDate.append(personDict["release_date"]! as! String)
+                                        self.director.append(personDict["director"]! as! String)
+                                        self.openingCrawl.append(personDict["opening_crawl"]! as! String)
                                     }
                                 }
                             }
@@ -92,4 +98,16 @@ class FilmViewController: UITableViewController {
         return cell
     }
 
+    //when cell clicked --> show details in another view controller (filmVC)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         
+         let filmVC = self.storyboard?.instantiateViewController(withIdentifier: "FilmDetailsViewController") as! FilmDetailsViewController
+                     
+         // sending data to FilmDetailsViewController
+         filmVC.filmTitle = "Title : \(films[indexPath.row])"
+         filmVC.releaseDate = "Release date: \(releaseDate[indexPath.row])"
+         filmVC.director = "Director: \(director[indexPath.row])"
+         filmVC.openingCrawl = "Opening Crawl: \(openingCrawl[indexPath.row])"
+         
+         self.present(filmVC, animated: true, completion: nil) }
 }

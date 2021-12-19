@@ -19,6 +19,8 @@
 		8406E771276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E770276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift */; };
 		8406E77E276F8E1D0081C0FE /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E77D276F8E1D0081C0FE /* FilmViewController.swift */; };
 		8406E780276FA3BC0081C0FE /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E77F276FA3BC0081C0FE /* StarWarsModel.swift */; };
+		8406E782276FA9AB0081C0FE /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E781276FA9AB0081C0FE /* PersonDetailsViewController.swift */; };
+		8406E784276FACEB0081C0FE /* FilmDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E783276FACEB0081C0FE /* FilmDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		8406E770276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GET_PeopleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8406E77D276F8E1D0081C0FE /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
 		8406E77F276FA3BC0081C0FE /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
+		8406E781276FA9AB0081C0FE /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
+		8406E783276FACEB0081C0FE /* FilmDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				8406E753276F843D0081C0FE /* GET_People.xcdatamodeld */,
 				8406E77D276F8E1D0081C0FE /* FilmViewController.swift */,
 				8406E77F276FA3BC0081C0FE /* StarWarsModel.swift */,
+				8406E781276FA9AB0081C0FE /* PersonDetailsViewController.swift */,
+				8406E783276FACEB0081C0FE /* FilmDetailsViewController.swift */,
 			);
 			path = "GET People";
 			sourceTree = "<group>";
@@ -273,6 +279,8 @@
 				8406E77E276F8E1D0081C0FE /* FilmViewController.swift in Sources */,
 				8406E780276FA3BC0081C0FE /* StarWarsModel.swift in Sources */,
 				8406E755276F843D0081C0FE /* GET_People.xcdatamodeld in Sources */,
+				8406E782276FA9AB0081C0FE /* PersonDetailsViewController.swift in Sources */,
+				8406E784276FACEB0081C0FE /* FilmDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,49 +9,68 @@ class PeopleViewController: UITableViewController {
     
        override func viewDidLoad() {
            super.viewDidLoad()
-        
-           // specify the url that we will be sending the GET request to
-                   let url = URL(string: "https://swapi.dev/api/people/?format=json")
-                   // create a URLSession to handle the request tasks
-                   let session = URLSession.shared
-                   // create a "data task" to make the request and run completion handler
-                   let task = session.dataTask(with: url!, completionHandler: {
-                       // see: Swift closure expression syntax
+        //without mvc
+//           // specify the url that we will be sending the GET request to
+//                   let url = URL(string: "https://swapi.dev/api/people/?format=json")
+//                   // create a URLSession to handle the request tasks
+//                   let session = URLSession.shared
+//                   // create a "data task" to make the request and run completion handler
+//                   let task = session.dataTask(with: url!, completionHandler: {
+//                       // see: Swift closure expression syntax
+//                       data, response, error in
+//                       // data -> JSON data, response -> headers and other meta-information, error-> if one occurred
+//                       // "do-try-catch" blocks execute a try statement and then use the catch statement for errors
+//                       do {
+//                           // try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
+//                           if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+//                            //   print(jsonResult)
+//                               // Why do we need to optionally unwrap jsonResult["results"]
+//                                   // Try it without the optional unwrapping and you'll see that the value is actually an optional
+//                                   if let results = jsonResult["results"] {
+//                                   // coercing the results object as an NSArray and then storing that in resultsArray
+//                                       let resultsArray = results as! NSArray
+//                                       // now we can run NSArray methods like count and firstObject
+//                                       for person in resultsArray {
+//                                           let personDict = person as! NSDictionary
+//                                           self.people.append(personDict["name"]! as! String)
+//                                       }
+//                                    //   print(resultsArray.count)
+//                                    //   print(resultsArray[0])
+//                                     //  print(resultsArray.firstObject)
+//                                   }
+//                           }
+//                           DispatchQueue.main.async {
+//                                 self.tableView.reloadData()
+//                           }
+//                       } catch {
+//                           print(error)
+//                       }
+//                   })
+//                   // execute the task and then wait for the response
+//                   // to run the completion handler. This is async!
+//                   task.resume()
+           
+           // with mvc
+           StarWarsModel.getAllPeople(completionHandler: {
+               // passing what becomes "completionHandler" in the 'getAllPeople' function definition in StarWarsModel.swift
                        data, response, error in
-                       // data -> JSON data, response -> headers and other meta-information, error-> if one occurred
-                       // "do-try-catch" blocks execute a try statement and then use the catch statement for errors
-                       do {
-                           // try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
-                           if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                            //   print(jsonResult)
-                               // Why do we need to optionally unwrap jsonResult["results"]
-                                   // Try it without the optional unwrapping and you'll see that the value is actually an optional
-                                   if let results = jsonResult["results"] {
-                                   // coercing the results object as an NSArray and then storing that in resultsArray
-                                       let resultsArray = results as! NSArray
-                                       // now we can run NSArray methods like count and firstObject
-                                       for person in resultsArray {
+                           do {
+                               // Try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
+                               if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+                                   if let results = jsonResult["results"] as? NSArray {
+                                       for person in results {
                                            let personDict = person as! NSDictionary
                                            self.people.append(personDict["name"]! as! String)
-                                         //  self.Gender.append(personDict["gender"]! as! String)
-                                         //  self.birth_year.append(personDict["birth_year"]! as! String)
-                                          // self.mass.append(personDict["mass"]! as! String)
                                        }
-                                    //   print(resultsArray.count)
-                                    //   print(resultsArray[0])
-                                     //  print(resultsArray.firstObject)
                                    }
+                               }
+                               DispatchQueue.main.async {
+                                   self.tableView.reloadData()
+                               }
+                           } catch {
+                               print("Something went wrong")
                            }
-                           DispatchQueue.main.async {
-                                 self.tableView.reloadData()
-                           }
-                       } catch {
-                           print(error)
-                       }
                    })
-                   // execute the task and then wait for the response
-                   // to run the completion handler. This is async!
-                   task.resume()
        }
        override func didReceiveMemoryWarning() {
            super.didReceiveMemoryWarning()

@@ -18,6 +18,7 @@
 		8406E76F276F843E0081C0FE /* GET_PeopleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E76E276F843E0081C0FE /* GET_PeopleUITests.swift */; };
 		8406E771276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E770276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift */; };
 		8406E77E276F8E1D0081C0FE /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E77D276F8E1D0081C0FE /* FilmViewController.swift */; };
+		8406E780276FA3BC0081C0FE /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E77F276FA3BC0081C0FE /* StarWarsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8406E76E276F843E0081C0FE /* GET_PeopleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GET_PeopleUITests.swift; sourceTree = "<group>"; };
 		8406E770276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GET_PeopleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8406E77D276F8E1D0081C0FE /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
+		8406E77F276FA3BC0081C0FE /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				8406E75B276F843E0081C0FE /* Info.plist */,
 				8406E753276F843D0081C0FE /* GET_People.xcdatamodeld */,
 				8406E77D276F8E1D0081C0FE /* FilmViewController.swift */,
+				8406E77F276FA3BC0081C0FE /* StarWarsModel.swift */,
 			);
 			path = "GET People";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				8406E74B276F843D0081C0FE /* AppDelegate.swift in Sources */,
 				8406E74D276F843D0081C0FE /* SceneDelegate.swift in Sources */,
 				8406E77E276F8E1D0081C0FE /* FilmViewController.swift in Sources */,
+				8406E780276FA3BC0081C0FE /* StarWarsModel.swift in Sources */,
 				8406E755276F843D0081C0FE /* GET_People.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

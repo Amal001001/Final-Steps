@@ -1,9 +1,5 @@
-//
 //  ViewController.swift
 //  GET People
-//
-//  Created by admin on 19/12/2021.
-//
 
 import UIKit
 
@@ -13,7 +9,7 @@ class PeopleViewController: UITableViewController {
     
        override func viewDidLoad() {
            super.viewDidLoad()
-          
+        
            // specify the url that we will be sending the GET request to
                    let url = URL(string: "https://swapi.dev/api/people/?format=json")
                    // create a URLSession to handle the request tasks
@@ -77,5 +73,6 @@ class PeopleViewController: UITableViewController {
            return cell
        }
 
+    
 }
 

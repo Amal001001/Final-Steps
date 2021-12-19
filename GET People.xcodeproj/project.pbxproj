@@ -17,6 +17,7 @@
 		8406E765276F843E0081C0FE /* GET_PeopleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E764276F843E0081C0FE /* GET_PeopleTests.swift */; };
 		8406E76F276F843E0081C0FE /* GET_PeopleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E76E276F843E0081C0FE /* GET_PeopleUITests.swift */; };
 		8406E771276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E770276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift */; };
+		8406E77E276F8E1D0081C0FE /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406E77D276F8E1D0081C0FE /* FilmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8406E76A276F843E0081C0FE /* GET PeopleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GET PeopleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8406E76E276F843E0081C0FE /* GET_PeopleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GET_PeopleUITests.swift; sourceTree = "<group>"; };
 		8406E770276F843E0081C0FE /* GET_PeopleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GET_PeopleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8406E77D276F8E1D0081C0FE /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				8406E758276F843E0081C0FE /* LaunchScreen.storyboard */,
 				8406E75B276F843E0081C0FE /* Info.plist */,
 				8406E753276F843D0081C0FE /* GET_People.xcdatamodeld */,
+				8406E77D276F8E1D0081C0FE /* FilmViewController.swift */,
 			);
 			path = "GET People";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				8406E74F276F843D0081C0FE /* PeopleViewController.swift in Sources */,
 				8406E74B276F843D0081C0FE /* AppDelegate.swift in Sources */,
 				8406E74D276F843D0081C0FE /* SceneDelegate.swift in Sources */,
+				8406E77E276F8E1D0081C0FE /* FilmViewController.swift in Sources */,
 				8406E755276F843D0081C0FE /* GET_People.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,9 +1,5 @@
-//
 //  AppDelegate.swift
 //  GET People
-//
-//  Created by admin on 19/12/2021.
-//
 
 import UIKit
 import CoreData
